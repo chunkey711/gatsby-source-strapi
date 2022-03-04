@@ -12,7 +12,7 @@ module.exports = async (entityDefinition, ctx) => {
   const requestOptions = {
     method: 'GET',
     url: apiBase,
-    timeout: 300000,
+    timeout: 999999,
     // Place global params first, so that they can be overriden by api.qs
     params: { _limit: queryLimit, ...api?.qs },
     headers: addAuthorizationHeader({}, jwtToken),
