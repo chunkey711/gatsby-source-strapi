@@ -25,7 +25,7 @@ module.exports = async (entityDefinition, ctx) => {
   );
 
   try {
-    reporter.info('!!!!!!!!!!! REQUEST OPTIONS::: ', requestOptions.timeout)
+    reporter.info(`!!!!!!!!!!! REQUEST OPTIONS::: ${JSON.stringify(requestOptions.timeout)}`)
 
     const { data } = await axios(requestOptions);
     return castArray(data).map(clean);
