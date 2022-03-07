@@ -25,6 +25,8 @@ module.exports = async (entityDefinition, ctx) => {
   );
 
   try {
+    reporter.info('!!!!!!!!!!! REQUEST OPTIONS::: ', requestOptions.timeout)
+
     const { data } = await axios(requestOptions);
     return castArray(data).map(clean);
   } catch (error) {
